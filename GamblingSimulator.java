@@ -10,12 +10,14 @@ public class GamblingSimulator {
 			while (dayStake < 150 && dayStake > 50) {
 				dayStake += doBet(1);
 			}
-
+			
 			winningAmount += (dayStake - 100);
+			totalWinningAmount += winningAmount;
+			System.out.println("winning amount = " + winningAmount);
 			totalWinningAmount += dayStake;
-			System.out.println("resigned the game");
-			day++;
 		}
+		
+		System.out.println("\ntotal winning amount " + totalWinningAmount);
 	}
 
 	static int doBet(int bid) {
